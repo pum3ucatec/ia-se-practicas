@@ -43,3 +43,7 @@ Se requiere implementar un programa en Python que:
 4. **Visualización**:
    - Utiliza **Matplotlib** para graficar los puntos en el plano 2D y mostrar los clusters visualmente.
    - Asegúrate de etiquetar los puntos en el gráfico y de hacer que la visualización sea clara.
+
+5.  **Setup**:
+-
+6.   
