@@ -6,9 +6,9 @@ Este proyecto tiene como objetivo resolver un problema de **clustering** en un p
 
 La **distancia euclidiana** es una medida de proximidad entre dos puntos en un espacio. Dada una pareja de puntos \( A \) y \( B \) con coordenadas \( (x_1, y_1) \) y \( (x_2, y_2) \), respectivamente, la distancia entre ellos se calcula con la siguiente fórmula:
 
-\[
+$$
 \text{Distancia} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
-\]
+$$
 
 Esta fórmula se utiliza para calcular la distancia entre cada par de puntos en el conjunto y decidir qué puntos están lo suficientemente cerca para formar un cluster.
 
