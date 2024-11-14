@@ -1,0 +1,32 @@
+ sudo apt update
+  233  sudo apt upgrade -y
+  234  sudo apt autoremove -y
+  235  sudo apt install -y build-essential libssl-dev libffi-dev     zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget     curl llvm libncurses5-dev libncursesw5-dev liblzma-dev     xz-utils tk-dev libgdbm-dev libdb-dev libexpat1-dev     libmpdec-dev libxml2-dev libxmlsec1-dev libffi-dev     liblzma-dev libgmp-dev
+  236  cd /usr/src
+  237  sudo wget https://www.python.org/ftp/python/3.13.0/Python-3.13.0.tgz
+  238  ls -la
+  239  sudo tar xzf Python-3.13.0.tgz
+  240  ls -la
+  241  cd Python-3.13.0/
+  242  sudo ./configure --enable-optimizations --enable-shared
+  243  sudo make -j$(nproc)
+  244  sudo make altinstall
+  245  python3.13 --version
+  246  sudo find /usr/local/lib /usr/lib -name "libpython3.13.so.1.0"
+  247  echo "/usr/local/lib" | sudo tee /etc/ld.so.conf.d/python3.13.conf
+  248  sudo ldconfig
+  249  python3.13 --version
+  250  source myenv/bin/activate
+  251  python3.13 practica1/grafica.py
+  252  pip install --upgrade pip
+  253  pip install matplotlib
+  254  pip show matplotlib
+  255  python3.13 practica1/grafica.py
+  256  python3.13 -m pip install --upgrade pip
+  257  pip3.13 install --upgrade pip
+  258  pip3.13 -m pip install --upgrade pip
+  259  pip3.13 -m pip3.13 install --upgrade pip3.13
+  260  pytho3.13 -m pip3.13 install --upgrade pip3.13
+  261  python3.13 -m pip3.13 install --upgrade pip3.13
+  262  pip3.13 install matplotlib
+  263  python3.13 practica1/grafica.py
