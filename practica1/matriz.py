@@ -9,7 +9,32 @@ puntos = {
     "B": (5, 1),
     "C": (8, 3),
     "D": (1, 7),
-    "E": (6, 5)
+    "E": (6, 5),
+    "F": (3, 9),
+    "G": (4, 8),
+    "H": (7, 2),
+    "I": (9, 6),
+    "J": (5, 7),
+    "K": (3, 4),
+    "L": (6, 1),
+    "M": (8, 8),
+    "N": (2, 6),
+    "O": (4, 3),
+    "P": (9, 9),
+    "Q": (7, 5),
+    "R": (1, 8),
+    "S": (3, 1),
+    "T": (6, 9),
+    "U": (5, 3),
+    "V": (8, 7),
+    "W": (2, 2),
+    "X": (7, 8),
+    "Y": (9, 1),
+    "Z": (1, 5),
+    "AA": (4, 6),
+    "AB": (3, 7),
+    "AC": (6, 8),
+    "AD": (5, 5)
 }
 
 # Extraer nombres y coordenadas de los puntos
@@ -59,4 +84,4 @@ plt.title("Distribución de Puntos en Coordenadas")
 plt.legend()
 plt.grid(True)
 #plt.show()
-plt.savafig("Grafico.png")
+plt.savefig("Grafico.png")
