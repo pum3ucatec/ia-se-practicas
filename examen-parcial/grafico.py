@@ -3,27 +3,34 @@ import numpy as np
 from cosine_similarity import cosine_similarity
 
 def plot_vectors(x, y, similarity, output_file="grafico.png"):
-    """Grafica dos vectores y guarda el resultado como una imagen PNG."""
+    """Grafica dos vectores y muestra su información, además de guardar el resultado como una imagen PNG."""
     origin = [0, 0]  # Origen para ambos vectores
 
     # Convertir los vectores para graficar
     x_coords = np.array(x)
     y_coords = np.array(y)
 
-    # Graficar
-    plt.quiver(*origin, x_coords[0], x_coords[1], angles='xy', scale_units='xy', scale=1, color='r', label='Vector X')
-    plt.quiver(*origin, y_coords[0], y_coords[1], angles='xy', scale_units='xy', scale=1, color='b', label='Vector Y')
+    # Graficar los vectores
+    plt.quiver(*origin, x_coords[0], x_coords[1], angles='xy', scale_units='xy', scale=1, color='r', label=f'Vector X {x}')
+    plt.quiver(*origin, y_coords[0], y_coords[1], angles='xy', scale_units='xy', scale=1, color='b', label=f'Vector Y {y}')
 
-    # Configurar límites y texto
+    # Configurar límites
     plt.xlim(-0.5, 0.5)
     plt.ylim(-0.5, 0.5)
     plt.axhline(0, color='gray', linewidth=0.5)
     plt.axvline(0, color='gray', linewidth=0.5)
     plt.grid()
+
+    # Título y leyenda
     plt.title(f'Similitud Coseno: {similarity:.2f}')
     plt.legend()
 
-    # Guardar la imagen
+    # Agregar texto con información adicional
+    plt.text(0.1, -0.4, f"Vector X: {x}", fontsize=10, color='red')
+    plt.text(0.1, -0.45, f"Vector Y: {y}", fontsize=10, color='blue')
+    plt.text(0.1, -0.5, f"Similitud Coseno: {similarity:.2f}", fontsize=10, color='green')
+
+    # Guardar la imagen como PNG
     plt.savefig(output_file)
     print(f"Gráfico guardado como {output_file}")
     plt.close()
