@@ -84,4 +84,8 @@ plt.title("Distribución de Puntos en Coordenadas")
 plt.legend()
 plt.grid(True)
 #plt.show()
+<<<<<<< HEAD
 plt.savefig("Grafico.png")
+=======
+plt.savefig("Grafica_Matriz.png")
+>>>>>>> origin/master

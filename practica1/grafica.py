@@ -12,6 +12,8 @@ puntos = {
 # Extraer nombres y coordenadas de los puntos
 nombres = list(puntos.keys())
 coordenadas = list(puntos.values())
+print(nombres)
+print(coordenadas)
 
 # Crear una figura y un gráfico de dispersión
 plt.figure(figsize=(8, 6))
