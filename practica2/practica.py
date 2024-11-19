@@ -43,19 +43,26 @@ for i in range(len(coordenadas)):
         print(f"Distancia entre {nombres[i]} y {nombres[j]}: {distancia:.2f}")
 
 # Crear una figura y un gráfico de dispersión
-plt.figure(figsize=(8, 6))
+plt.figure(figsize=(12, 12))
 
 # Graficar cada punto y etiquetarlo
 for i, nombre in enumerate(nombres):
     x, y = coordenadas[i]
     plt.scatter(x, y, label=f'{nombre} ({x}, {y})')
-    plt.text(x + 0.2, y + 0.2, nombre, fontsize=12)
+    # Desplazar las etiquetas hacia la derecha del punto (x+0.2)
+    plt.text(x + 0.2, y, nombre, fontsize=12)
 
 # Configurar el gráfico
 plt.xlabel("Coordenada X")
 plt.ylabel("Coordenada Y")
 plt.title("Puntos aleatorios sin repeticiones")
-plt.legend()
 plt.grid(True)
+
+# Mover la leyenda a la derecha del gráfico
+plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
+
+# Mostrar el gráfico
 # plt.show()
-plt.savefig("Grafico_practica.png")
+
+# Guardar el gráfico
+plt.savefig("Grafico_unico.png")
