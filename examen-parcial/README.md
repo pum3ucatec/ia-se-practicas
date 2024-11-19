@@ -41,4 +41,4 @@ Este patrón es clave para analizar similitudes en datos complejos y tiene ampli
 
 ## Pregunta
 
-Realizar el codigo en python para graficar el ejemplo practico
+Realizar el codigo en python para graficar el ejemplo practico...
