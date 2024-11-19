@@ -6,7 +6,7 @@ puntos = {
     "B": (5, 1),
     "C": (8, 3),
     "D": (1, 7),
-    "E": (6, 5)
+    "E": (2, 5)
 }
 
 # Extraer nombres y coordenadas de los puntos
