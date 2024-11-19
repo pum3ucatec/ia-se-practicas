@@ -65,4 +65,4 @@ plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
 # plt.show()
 
 # Guardar el gráfico
-plt.savefig("Grafico_practica.png")
+plt.savefig("Grafico_practica2.png")
