@@ -1,36 +1,49 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Definimos los vectores TF-IDF
-X = np.array([0.2, 0.5, 0.1, 0.0])
-Y = np.array([0.3, 0.4, 0.0, 0.2])
+# Definimos dos vectores de características TF-IDF
+vector1 = np.array([0.2, 0.5, 0.1, 0.0])
+vector2 = np.array([0.3, 0.4, 0.0, 0.2])
 
-# Calculamos la similitud coseno
-def cosine_similarity(x, y):
-    dot_product = np.dot(x, y)
-    norm_x = np.linalg.norm(x)
-    norm_y = np.linalg.norm(y)
-    return dot_product / (norm_x * norm_y)
+# Función para calcular la similitud del coseno
+def similitud_coseno(vector_a, vector_b):
+    """Calcula la similitud del coseno entre dos vectores.
 
-similarity = cosine_similarity(X, Y)
+    Args:
+        vector_a: El primer vector.
+        vector_b: El segundo vector.
 
-# Imprimimos el resultado de la similitud coseno
-print(f"Similitud coseno: {similarity:.4f}")
+    Returns:
+        La similitud del coseno entre los dos vectores.
+    """
 
-# Graficamos los vectores
+    producto_punto = np.dot(vector_a, vector_b)
+    norma_a = np.linalg.norm(vector_a)
+    norma_b = np.linalg.norm(vector_b)
+    return producto_punto / (norma_a * norma_b)
+
+# Calculamos la similitud del coseno entre los dos vectores
+similitud = similitud_coseno(vector1, vector2)
+print(f"Similitud del coseno: {similitud:.4f}")
+
+# Creamos una figura para la gráfica
 plt.figure(figsize=(8, 6))
-plt.quiver(0, 0, X[0], X[1], angles='xy', scale_units='xy', scale=1, color='r', label='Vector X')
-plt.quiver(0, 0, Y[0], Y[1], angles='xy', scale_units='xy', scale=1, color='b', label='Vector Y')
 
-# Configuraciones del gráfico
+# Graficamos los vectores como flechas
+plt.quiver(0, 0, vector1[0], vector1[1], angles='xy', scale_units='xy', scale=1, color='r', label='Vector 1')
+plt.quiver(0, 0, vector2[0], vector2[1], angles='xy', scale_units='xy', scale=1, color='b', label='Vector 2')
+
+# Configuramos la gráfica
 plt.xlim(-0.5, 1)
 plt.ylim(-0.5, 1)
-plt.axhline(0, color='black',linewidth=0.5, ls='--')
-plt.axvline(0, color='black',linewidth=0.5, ls='--')
-plt.grid()
-plt.title('Vectores TF-IDF y Similitud Coseno')
+plt.axhline(0, color='black', linewidth=0.5, linestyle='--')
+plt.axvline(0, color='black', linewidth=0.5, linestyle='--')
+plt.grid(True)
+plt.title('Vectores TF-IDF y Similitud del Coseno')
 plt.xlabel('Componente 1')
 plt.ylabel('Componente 2')
 plt.legend()
-plt.show()
 
+# Guardamos la gráfica como un archivo PNG
+plt.savefig("grafico_similitud_coseno.png")
+plt.show()
